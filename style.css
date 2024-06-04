@@ -175,3 +175,23 @@ footer {
   height: 50px;
   width: 50px;
 }
+
+.photo-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.photo-slider img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: black; /* Change the color of the arrows */
+}
