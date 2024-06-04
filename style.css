@@ -1,125 +1,177 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  font-weight: 500;
-  font-style: normal;
+  background-color: #f5f5f5;
+  font-size: small;
 }
 
 header {
-  background: hsl(0, 68%, 44%);
-  color: #fff;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
 }
 
-h1 {
-  margin: 0;
+header .logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
 }
 
-main {
+header h1 {
+  margin: 10px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.intro, .closing {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.activities, .photos, .how-to, .accommodation, .contact {
   padding: 20px;
 }
 
-.intro {
-  margin-bottom: 20px;
+.activities h2, .photos h2, .how-to h2, .accommodation h2, .contact h2 {
   text-align: center;
-  background-color: hsl(191, 21%, 63%);
-  padding: 20px;
-  border-radius: 8px;
 }
 
-.activities {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.activities h2 {
-  text-align: center;
-  color: #333;
-  background-color: #fafad2;
-  padding: 10px;
-  border-radius: 8px;
+.activities{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .activity {
-  display:flexbox;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
-  border: 2px solid #ddd;
-  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.activity h3 {
-  color: black;
-  margin-bottom: 10px;
-  background-color: #aaefa4;
-  padding: 5px;
-  border-radius: 8px;
+  overflow: hidden;
+  justify-content: center;
 }
 
 .activity img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 8px;
+  max-width: 80%;
+  height:fit-content;
+  flex: 1 1 200px;
+  object-fit:cover;
+  height: 20rem;
+  align-items: center;
+
 }
 
-.activity-details {
-  flex: 1;
+.activity div {
+  flex: 2 1 300px;
+  padding: 20px;
 }
 
-.activity-info {
-  font-weight: bold;
-  color: #333;
-  background-color: #fafad2;
-  padding: 10px;
-  border-radius: 8px;
+.activity h3 {
+  margin-top: 0;
+}
+
+.activity-description {
+  margin: 0;
 }
 
 .button {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: hsl(348, 66%, 48%);
-  color: #fff;
+  background-color: hsl(0, 73%, 49%);
+  color: white;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .button:hover {
-  background-color: #9e1a03;
-}
-
-.closing {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 20px;
+  background-color: hsl(0, 95%, 47%);
 }
 
 footer {
-  background: #333;
-  color: #fff;
   text-align: center;
-  padding: 3px 0;
-  position: fixed;
-  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: relative;
   bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-footer p {
-  margin: 0;
+.toggle-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: hsl(0, 73%, 49%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: hsl(0, 95%, 47%);
+}
+
+.travel-directions {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+.travel-directions h3 {
+  margin-top: 0;
+}
+
+.travel-directions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.travel-directions p, .travel-directions ul {
+  margin: 10px 0;
+}
+
+.book-now-container {
+  text-align: center; /* Center-aligns the content */
+  margin: 20px 0; /* Add some margin if needed */
+}
+
+.book-now-image {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
 }

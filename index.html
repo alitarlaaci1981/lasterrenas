@@ -2,41 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Las Terrenas Wing Chun Vacation Retreat</title>
 </head>
 
-<body>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  </head>
-
   <body>
     <header>
+        <img src="images/FireShot Capture 024 - What is Wing Chun Kung Fu_ wing chun training school_ - www.learnshaolinkungfu.com.png" alt="Las Terrenas Kungfu Vacation & Retreat Logo" class="logo">
         <h1>Las Terrenas Kungfu Vacation & Retreat</h1>
-        <img src="images/ipman kick.png" alt="ipman kick" style="height: 50px; width: 50px;">
-
-    </header>
-    <main>
-        <section class="intro">
-            <p>Join us for a transformative 6-day Wing Chun Kungfu vacation retreat in the beautiful Dominican Republic. Each day brings a unique and exciting activity, combining martial arts practice with cultural and natural explorations.</p>
+        <nav>
+            <ul>
+              <li><a href="#contact" class="navbar">Contact Info</a></li>
+              <li><a href="#activities">Activity Details</a></li>
+              <li><a href="#photos">Photos</a></li>
+              <li><a href="#how-to">How To</a></li>
+              <li><a href="#accommodation">Accommodation</a></li>
+            </ul>
+          </nav>
+          
+          <div class="book-now-container">
+            <img src="images/ipman kick.png" alt="ipman kick" class="book-now-image">
             <a href="#book" class="button">Book Now</a>
-        </section>
+        </div>   
+    </header>
+
+    <main>
+        <sectio id="intro" class="intro">
+            <p>Join us for a transformative 6-day Wing Chun Kungfu vacation retreat in the beautiful Dominican Republic. Each day brings a unique and exciting activity, combining martial arts practice with cultural and natural explorations.</p>
+           
+        </sectio>
 
         <section class="video-section">
             <video width="100%" controls>
                 <source src="images/Untitled design.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </section>
 
@@ -100,59 +107,69 @@
                 </div>
             </div>
         </section>
+
+        <section id="photos" class="photos">
+            <h2>Photos</h2>
+            <!-- Photos here -->
+          </section>
+      
+          <section id="how-to" class="how-to">
+            <h2>How To</h2>
+            <button id="toggle-button" class="toggle-button">Show Travel Directions</button>
+            <div id="travel-directions" class="travel-directions" style="display: none;">
+              <h3>From Santa Domingo to Las Terrenas</h3>
+              <p><strong>Taxi from Santa Domingo Airport to Bus Stop:</strong></p>
+              <p><strong>Bus Stop Address:</strong> Parada Samana - Asotrapusa El Jumazo, Santo Domingo</p>
+              <p>The bus stop is located right in front of the water. You can take a taxi from the airport to the bus stop, which costs around 15 USD.</p>
+              <p><strong>Bus Schedule from Santa Domingo to Las Terrenas:</strong></p>
+              <ul>
+                <li>8:30 AM</li>
+                <li>9:30 AM</li>
+                <li>11:00 AM</li>
+                <li>1:40 PM</li>
+                <li>3:00 PM</li>
+                <li>6:00 PM</li>
+              </ul>
+              <p>The bus fee is approximately 500 pesos (around 10 USD) and the journey takes about 2 hours. When you arrive at the Las Terrenas bus stop, you will need to take a taxi to your hotel.</p>
+          
+              <h3>From Las Terrenas to Santa Domingo</h3>
+              <p><strong>Bus Stop Address:</strong> 8F32+MCC, Las Terrenas 32000, Dominican Republic</p>
+              <p><strong>Bus Schedule from Las Terrenas to Santa Domingo:</strong></p>
+              <ul>
+                <li>5:00 AM</li>
+                <li>7:00 AM</li>
+                <li>9:00 AM</li>
+                <li>11:00 AM</li>
+                <li>2:00 PM</li>
+                <li>3:30 PM</li>
+              </ul>
+              <p>When you get off the bus at the Parada Samana bus stop in Santa Domingo, take a taxi to the airport (15 USD).</p>
+            </div>
+          </section>
+          
+      
+          <section id="accommodation" class="accommodation">
+            <h2>Accommodation</h2>
+          </section>
+      
+          <section id="contact" class="contact">
+            <h2>Contact Info</h2>
+            <!-- Contact info here -->
+          </section>
         <section class="closing">
             <p>Join us for a week of Wing Chun Kungfu practice with Grandmaster and fellow practitioners. Embrace the adventure, tranquility, and inspiration of this unique retreat experience. Book now and transform your spirit in paradise!</p>
             <a href="#book" class="button">Book Now</a>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Las Terrenas Kungfu Vacation & Retreat</p>
         <p>Contact Us: lasterrenaswingchun@gmail.com</p>
     </footer>
+    <script src="index.js"></script>
 
-
-
-
-    <!-- <header class="header">
-    <div class="wrapper center">
-    <h1 class="header_title">IP Address Tracker</h1>
-    <form class="header_form">
-      <input type="text" id="search" placeholder="Search for any IP address or domain">
-      <button>
-        <img src="https://raw.githubusercontent.com/iamspruce/temp-intro-to-api/c4d6abdcc73f63cf24a6b02fa37be5ee1b6d122e/icon-arrow.svg" alt="" srcset="">
-      </button>
-    </form>
-    <div class="header_desc">
-      <div>
-        <p>IP Address</p>
-        <p class="large_text">
-          <span class="address">
-          </span>
-        </p>
-      </div>
-      <div>
-        <p>Location</p>
-        <p class="large_text">
-            <span class="location"></span>
-        </p>
-      </div>
-      <div>
-        <p>Timezone</p>
-            <p class="large_text">  <span class="utc"></span></p>
-      </div>
-      <div>
-        <p>ISP</p>
-        <p class="large_text">
-            <span class="isp"></span>
-        </p>
-      </div>
-    </div>
-    </div>
-    </header>
-    <footer class="footer">
-    <div class="map" id="map"></div>
-    </footer>
-    <script src="index.js"></script> -->
-  </body>
+</body>
 
 </html>
+
+    
