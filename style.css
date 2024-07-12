@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
-  font-size:1.25rem;
+  font-size:0.60rem;
 }
 
 header {
@@ -15,9 +15,13 @@ header {
   padding: 20px;
   background-color: #333;
   color: white;
-  background-image: url('images/wallpaper.jpg');
-  height: 600px;
+  background-image: url('images/wingchunbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
+
+
 
 
 
@@ -182,16 +186,36 @@ footer {
   width: 300px;
 }
 
+#photos {
+  margin-top: 40px;
+}
+
 .photo-slider {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  white-space: nowrap; /* Prevent line breaks between images */
+}
+
+.photo-slider div {
+  display: inline-block;
+  width: 100%; /* Ensure each image takes full width */
+  height: auto; /* Maintain aspect ratio */
+  text-align: center; /* Center align images */
+  margin-bottom: 20px;
 }
 
 .photo-slider img {
-  width: 100%;
-  height: 900px;
-  display: block;
-  object-fit:fill;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .photo-slider {
+    overflow-x: hidden; /* Disable horizontal scrolling on small screens */
+  }
 }
 
 .slick-dots {
@@ -247,4 +271,84 @@ footer {
 
 .sticky-button:hover {
   background-color: #e2ad10;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(187, 10, 10, 0.1);
+}
+
+#contact {
+  margin-top: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+#atv-rental {
+  margin-top: 40px;
+}
+
+#atv-rental .atv-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#atv-rental h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#atv-rental p {
+  text-align: justify;
+  line-height: 1.8;
 }
