@@ -74,28 +74,31 @@ nav ul li a:hover {
 .activities{
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
 .activity {
-  display:block;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  width: 100%; /* Ensures full width within the flex container */
+  max-width: 600px; /* Adjust max-width as needed */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .activity img {
-  max-width: 80%;
-  height:fit-content;
-  flex: 1 1 200px;
-  object-fit:cover;
-  height: 20rem;
-  align-items: center;
+  width: 100%; /* Ensures image fills its container */
+  max-height: 300px; /* Limits image height */
+  object-fit: cover; /* Covers the container while preserving aspect ratio */
+  border-bottom: 1px solid #ddd; /* Adds a separator line */
+}
 
+.activity-details {
+    padding: 20px;
 }
 
 .activity div {
@@ -109,6 +112,10 @@ nav ul li a:hover {
 
 .activity-description {
   margin: 0;
+}
+
+.activity-info {
+  margin: 0 0 10px; /* Adds bottom margin for spacing */
 }
 
 .button {
