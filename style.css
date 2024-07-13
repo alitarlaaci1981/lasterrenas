@@ -82,7 +82,6 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column; /* Stacks content vertically */
   width: 100%; /* Ensures full width within the flex container */
-  max-width: 600px; /* Adjust max-width as needed */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -102,7 +101,6 @@ nav ul li a:hover {
 }
 
 .activity div {
-  flex: 2 1 300px;
   padding: 20px;
 }
 
