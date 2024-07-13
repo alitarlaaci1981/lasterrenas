@@ -46,3 +46,18 @@ document.getElementById('stickyHomeButton').addEventListener('click', function(e
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+function emailSend(){
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "lasterrenaswingchun@gmail.com",
+    Password : "C9C1745CBDC19AAF44B82F1FA4463161EE7D",
+    To : 'kemaltarlaci1981@gmail.com',
+    From : "lasterrenaswingchun@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+}
+
