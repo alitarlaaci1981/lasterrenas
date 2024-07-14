@@ -46,6 +46,24 @@ document.getElementById('stickyHomeButton').addEventListener('click', function(e
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const viewMoreLinks = document.querySelectorAll('.view-more');
+
+  viewMoreLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const moreText = this.previousElementSibling;
+          if (moreText.style.display === 'none' || moreText.style.display === '') {
+              moreText.style.display = 'inline';
+              this.textContent = 'View Less';
+          } else {
+              moreText.style.display = 'none';
+              this.textContent = 'View More';
+          }
+      });
+  });
+});
+
 function emailSend(){
   Email.send({
     Host : "smtp.elasticemail.com",
