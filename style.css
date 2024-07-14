@@ -6,8 +6,9 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  font-size:0.70rem;
+  background-color: hwb(0 96% 4%);
+  font-size:0.90rem;
+
 }
 
 header {
@@ -16,9 +17,10 @@ header {
   background-color: #333;
   color: white;
   background-image: url('images/wingchunbackground.jpg');
-  background-size: cover;
+  background-size:cover;
   background-position: center;
-  height: 320px;
+  height: 500px;
+ 
 }
 
 
@@ -36,7 +38,7 @@ header .logo {
 }
 
 header h1 {
-  margin: 10px 0 0;
+  margin: 30px 0 0;
 }
 
 nav ul {
