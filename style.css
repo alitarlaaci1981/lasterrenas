@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: hwb(0 96% 4%);
-  font-size:0.90rem;
+  font-size:1.2rem;
 
 }
 
@@ -44,6 +44,7 @@ header h1 {
 nav ul {
   list-style: none;
   padding: 0;
+  font-size: 1rem;
 }
 
 nav ul li {
@@ -65,6 +66,10 @@ nav ul li a:hover {
   text-align: center;
   padding: 20px;
   background-color: #fff;
+}
+.intro p{
+  font-size:30px;
+  font-weight: bold;
 }
 
 .activities, .photos, .how-to, .accommodation, .contact {
