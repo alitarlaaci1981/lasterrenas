@@ -95,7 +95,7 @@ nav ul li a:hover {
 
 .activity img {
   width: 100%; /* Ensures image fills its container */
-  max-height: 300px; /* Limits image height */
+
   object-fit: cover; /* Covers the container while preserving aspect ratio */
   border-bottom: 1px solid #ddd; /* Adds a separator line */
 }
