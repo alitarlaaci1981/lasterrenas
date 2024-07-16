@@ -1,5 +1,13 @@
+:root {
+  --padding-inline: 30px;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -8,59 +16,80 @@ body {
   padding: 0;
   background-color: hwb(0 96% 4%);
   font-size:1.2rem;
+}
 
+body.menu-open {
+  overflow: hidden;
 }
 
 header {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  background-image: url('images/wingchunbackground.jpg');
-  background-size:cover;
-  background-position: center;
-  height: 500px;
- 
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-
-
-
-
-header .logo {
-  transform: translate(-5%, -5%);
-  display:block;
-  margin: 0 auto;
-  max-width: 200px;
-  max-height: 200px;
-  background: none;
-  z-index: 10
+header > nav {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding-block: 5px;
+  padding-inline: var(--padding-inline);
 }
 
-header h1 {
-  margin: 30px 0 0;
+header > nav > .logo img {
+  width: var(--header-logo-width, 60px);
+  height: var(--header-logo-height, 60px);
+  object-fit: cover;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1rem;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
+header > nav > .menu-btn {
+  border: none;
+  color: #ffffff;
+  margin-left: auto;
   font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+header > nav > .links {
+  --nav-height: 72px;
+  position: fixed;
+  left: 0;
+  top: var(--nav-height);
+  width: 100%;
+  height: calc(100dvh - var(--nav-height));
+  background-color: #000000;
+  padding-block: 50px;
+  padding-inline: var(--padding-inline);
 }
+
+header:not(.open) > nav > .links {
+  display: none;
+}
+
+header > nav > .links li {
+  margin-block-start: 20px;
+}
+
+header > nav > .links a:not(.button) {
+  font-size: 30px;
+  line-height: normal;
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+header > nav > .links a:not(.button):hover {
+  color: hsl(0, 95%, 47%);
+}
+
+header > nav > .links a.button {
+  display: block;
+  padding-block: 20px;
+  margin-block-start: 50px;
+}
+
 
 .intro, .closing {
   text-align: center;
@@ -74,6 +103,13 @@ nav ul li a:hover {
 
 .activities, .photos, .how-to, .accommodation, .contact {
   padding: 20px;
+}
+
+.activities h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-block-start: 30px;
+  margin-block-end: 20px;
 }
 
 .activities h2, .photos h2, .how-to h2, .accommodation h2, .contact h2 {
@@ -95,12 +131,13 @@ nav ul li a:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .activity img {
   width: 100%; /* Ensures image fills its container */
-
+  aspect-ratio: 9 / 4;
   object-fit: cover; /* Covers the container while preserving aspect ratio */
   border-bottom: 1px solid #ddd; /* Adds a separator line */
 }
@@ -115,8 +152,17 @@ nav ul li a:hover {
 
 .activity h3 {
   margin-top: 8px;
-  padding-left: 5px;
   margin-bottom: 5px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(3px);
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .activity-description {
@@ -124,6 +170,8 @@ nav ul li a:hover {
 }
 
 .activity-info {
+  font-size: 16px;
+  line-height: normal;
   margin: 0 0 10px; /* Adds bottom margin for spacing */
 }
 
@@ -406,4 +454,48 @@ footer {
   margin-left: 10px;
   color: hsl(240, 87%, 46%);
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .activities h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header > nav > .menu-btn {
+    display: none;
+  }
+
+  header > nav > .links {
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    margin-inline-start: auto;
+  }
+
+  header > nav > .links li {
+    margin-block-start: 0;
+    margin-inline: 10px;
+  }
+
+  header > nav > .links a:not(.button) {
+    font-size: 16px;
+    padding-inline: 10px;
+  }
+
+  header > nav > .links a.button {
+    margin-block-start: 0;
+    padding-block: 10px;
+    font-size: 16px;
+  }
 }
