@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+  const $header = document.querySelector('#header');
+
     const toggleButton = document.getElementById('toggle-button');
     const travelDirections = document.getElementById('travel-directions');
 
@@ -11,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleButton.textContent = 'Show Travel Directions';
       }
     });
+
+  new NavigationBar($header);
+
+
   });
 
   $(document).ready(function () {
@@ -79,3 +85,33 @@ function emailSend(){
 
 }
 
+
+
+function NavigationBar($header) {
+  const $menuBtn = $header.querySelector('.menu-btn');
+
+  let state = {
+    open: false
+  };
+
+  $menuBtn.addEventListener('click', toggleMenu);
+
+  function toggleMenu(event) {
+    event.preventDefault();
+
+    state = { ...state, open: !state.open };
+
+    if (state.open) {
+      $menuBtn.innerText = $menuBtn.getAttribute('data-close');
+      $header.classList.add('open');
+      document.body.classList.add('menu-open');
+    }
+    else {
+      $menuBtn.innerText = $menuBtn.getAttribute('data-open');
+      $header.classList.remove('open');
+      document.body.classList.remove('menu-open');
+
+    }
+  }
+
+}

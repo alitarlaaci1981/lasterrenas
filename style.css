@@ -1,5 +1,13 @@
+:root {
+  --padding-inline: 30px;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -8,59 +16,80 @@ body {
   padding: 0;
   background-color: hwb(0 96% 4%);
   font-size:1.2rem;
+}
 
+body.menu-open {
+  overflow: hidden;
 }
 
 header {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  background-image: url('images/wingchunbackground.jpg');
-  background-size:cover;
-  background-position: center;
-  height: 500px;
- 
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-
-
-
-
-header .logo {
-  transform: translate(-5%, -5%);
-  display:block;
-  margin: 0 auto;
-  max-width: 200px;
-  max-height: 200px;
-  background: none;
-  z-index: 10
+header > nav {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding-block: 5px;
+  padding-inline: var(--padding-inline);
 }
 
-header h1 {
-  margin: 30px 0 0;
+header > nav > .logo img {
+  width: var(--header-logo-width, 60px);
+  height: var(--header-logo-height, 60px);
+  object-fit: cover;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1rem;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
+header > nav > .menu-btn {
+  border: none;
+  color: #ffffff;
+  margin-left: auto;
   font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+header > nav > .links {
+  --nav-height: 72px;
+  position: fixed;
+  left: 0;
+  top: var(--nav-height);
+  width: 100%;
+  height: calc(100dvh - var(--nav-height));
+  background-color: #000000;
+  padding-block: 50px;
+  padding-inline: var(--padding-inline);
 }
+
+header:not(.open) > nav > .links {
+  display: none;
+}
+
+header > nav > .links li {
+  margin-block-start: 20px;
+}
+
+header > nav > .links a:not(.button) {
+  font-size: 30px;
+  line-height: normal;
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+header > nav > .links a:not(.button):hover {
+  color: hsl(0, 95%, 47%);
+}
+
+header > nav > .links a.button {
+  display: block;
+  padding-block: 20px;
+  margin-block-start: 50px;
+}
+
 
 .intro, .closing {
   text-align: center;
@@ -406,4 +435,37 @@ footer {
   margin-left: 10px;
   color: hsl(240, 87%, 46%);
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 1024px) {
+  header > nav > .menu-btn {
+    display: none;
+  }
+
+  header > nav > .links {
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    margin-inline-start: auto;
+  }
+
+  header > nav > .links li {
+    margin-block-start: 0;
+    margin-inline: 10px;
+  }
+
+  header > nav > .links a:not(.button) {
+    font-size: 16px;
+    padding-inline: 10px;
+  }
+
+  header > nav > .links a.button {
+    margin-block-start: 0;
+    padding-block: 10px;
+    font-size: 16px;
+  }
 }
