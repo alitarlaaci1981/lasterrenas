@@ -136,6 +136,7 @@ header > nav > .links a.button {
 }
 
 .activity img {
+  max-width:min-content;
   width: 100%; /* Ensures image fills its container */
   aspect-ratio: 9 / 4;
   object-fit: cover; /* Covers the container while preserving aspect ratio */
