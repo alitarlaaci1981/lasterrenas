@@ -105,6 +105,13 @@ header > nav > .links a.button {
   padding: 20px;
 }
 
+.activities h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-block-start: 30px;
+  margin-block-end: 20px;
+}
+
 .activities h2, .photos h2, .how-to h2, .accommodation h2, .contact h2 {
   text-align: center;
 }
@@ -124,12 +131,13 @@ header > nav > .links a.button {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .activity img {
   width: 100%; /* Ensures image fills its container */
-
+  aspect-ratio: 9 / 4;
   object-fit: cover; /* Covers the container while preserving aspect ratio */
   border-bottom: 1px solid #ddd; /* Adds a separator line */
 }
@@ -144,8 +152,17 @@ header > nav > .links a.button {
 
 .activity h3 {
   margin-top: 8px;
-  padding-left: 5px;
   margin-bottom: 5px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(3px);
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .activity-description {
@@ -153,6 +170,8 @@ header > nav > .links a.button {
 }
 
 .activity-info {
+  font-size: 16px;
+  line-height: normal;
   margin: 0 0 10px; /* Adds bottom margin for spacing */
 }
 
@@ -437,6 +456,17 @@ footer {
   cursor: pointer;
 }
 
+
+@media screen and (min-width: 768px) {
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .activities h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   header > nav > .menu-btn {
