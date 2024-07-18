@@ -175,6 +175,9 @@ header > nav > .links a.button {
   line-height: normal;
   margin: 0 0 10px; /* Adds bottom margin for spacing */
 }
+p.daily-activity{
+  font-weight: bold;
+}
 
 .button {
   display: inline-block;
@@ -411,6 +414,8 @@ footer {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 #atv-rental p {
