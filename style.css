@@ -509,3 +509,21 @@ footer {
 }
 
 
+/* Ensure swiper pagination is positioned correctly */
+.swiper-container {
+  position: relative;
+  margin-bottom: 20px; /* Ensure there's space below the slider */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px; /* Adjust this value as needed to position the pagination */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.activity-details {
+  margin-top: 20px; /* Add space above activity details */
+}
