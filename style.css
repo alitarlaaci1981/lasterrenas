@@ -136,6 +136,7 @@ header > nav > .links a.button {
 }
 
 .activity img {
+  
   max-width:min-content;
   width: 100%; /* Ensures image fills its container */
   aspect-ratio: 9 / 4;
@@ -145,6 +146,7 @@ header > nav > .links a.button {
 
 .activity-details {
     padding: 20px;
+    
 }
 
 .activity div {
@@ -505,3 +507,5 @@ footer {
     font-size: 16px;
   }
 }
+
+
