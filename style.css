@@ -509,11 +509,30 @@ footer {
 }
 
 
-/* Ensure swiper pagination is positioned correctly */
 .swiper-container {
   position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust this value based on your design */
   margin-bottom: 20px; /* Ensure there's space below the slider */
 }
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the slide without distortion */
+}
+
 
 .swiper-pagination {
   position: absolute;
@@ -523,6 +542,8 @@ footer {
   text-align: center;
   z-index: 10;
 }
+
+
 
 .activity-details {
   margin-top: 20px; /* Add space above activity details */
