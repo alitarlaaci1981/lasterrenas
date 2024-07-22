@@ -1,5 +1,6 @@
 :root {
   --padding-inline: 30px;
+  --container: 1440px;
 }
 
 html {
@@ -90,15 +91,51 @@ header > nav > .links a.button {
   margin-block-start: 50px;
 }
 
+.hero img {
+  max-width: calc(100% + var(--padding-inline) * 2);
+  height: auto;
+  margin-inline: calc(var(--padding-inline) * -1);
+}
 
-.intro, .closing {
+
+.hero .container {
+  padding-block: 0;
+  margin-block: 0;
+  background-color: transparent;
+}
+
+.hero h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: normal;
+  margin-block: 20px 10px;
+}
+
+.hero a.button {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  margin-block: 10px 30px;
+
+}
+
+.intro {
+  padding-block: 30px;
+  padding-inline: var(--padding-inline);
+  text-align: center;
+  background-color: #fff;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.closing {
   text-align: center;
   padding: 20px;
   background-color: #fff;
-}
-.intro p{
-  font-size:30px;
-  font-weight: bold;
 }
 
 .activities, .photos, .how-to, .accommodation, .contact {
@@ -339,9 +376,10 @@ footer {
 
 
 .container {
-  max-width: 600px;
+  max-width: var(--container);
+  padding-block: 20px;
+  padding-inline: var(--padding-inline);
   margin: 20px auto;
-  padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(187, 10, 10, 0.1);
 }
@@ -466,6 +504,12 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
+  .intro p {
+    max-width: 1200px;
+    margin-inline: auto;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -497,5 +541,47 @@ footer {
     margin-block-start: 0;
     padding-block: 10px;
     font-size: 16px;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: #000000;
+  }
+  
+  .hero .container {
+    display: flex;
+    padding-block: 0;
+    padding-block: 140px;
+  }
+
+  .hero img {
+    left: 30%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: absolute;
+    margin-inline: auto;
+  }
+
+  .hero .container > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    margin-block-end: 30px;
+    font-size: 45px;
+    text-align: left;
+  }
+
+  .hero a.button {
+    font-size: 24px;
+    width: 200px;
+    padding-block: 20px;
+    margin-inline: 0;
   }
 }
