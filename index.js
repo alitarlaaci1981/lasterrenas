@@ -89,12 +89,27 @@ function emailSend(){
 
 function NavigationBar($header) {
   const $menuBtn = $header.querySelector('.menu-btn');
+  const $navLinks = $header.querySelectorAll('.links a');
 
   let state = {
     open: false
   };
 
   $menuBtn.addEventListener('click', toggleMenu);
+
+  $navLinks.forEach($link => {
+    $link.addEventListener('click', (event) => {
+      // Ensure the default action of the link is performed
+      const targetId = $link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Toggle the menu
+      toggleMenu(event);
+    });
+  });
 
   function toggleMenu(event) {
     event.preventDefault();
@@ -105,16 +120,14 @@ function NavigationBar($header) {
       $menuBtn.innerText = $menuBtn.getAttribute('data-close');
       $header.classList.add('open');
       document.body.classList.add('menu-open');
-    }
-    else {
+    } else {
       $menuBtn.innerText = $menuBtn.getAttribute('data-open');
       $header.classList.remove('open');
       document.body.classList.remove('menu-open');
-
     }
   }
-
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
